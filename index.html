@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iValidate - validate email</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.svg" alt="iValidate Logo" width="25px">
+                <h1>iValidate</h1>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="email-validation">
+            <h1>Enter a Email to <br> Validate</h1>
+            <form>
+                <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Validate" id="submit" required>
+        </form>
+        </div>
+        <div class="result-box">
+            <p>-----Your Result ----- </p>
+            <div class="loading">
+                <!-- loading svg here -->
+            </div>
+            <div class="result-content"></div>
+        </div>
+    </main>
+    <footer>
+        <p>iValidate &copy; 2024 | Made with ❤️ by <a href="https://github.com/rajid-ansari">Rajid Ansari</a></p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

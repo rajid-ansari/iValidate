@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul li a:hover {
+  color: #dedde3;
+}
+
+main {
+  min-height: 85vh;
+  background-color: rgba(65, 40, 12, 0.209);
+}
+
+.email-validation {
+  /* background-color: #126432; */
+  width: 35vw;
+  height: fit-content;
+  margin-left: 25px;
+  padding: 35px 35px 15px 35px;
+}
+
+.email-validation h1 {
+  line-height: 35px;
+  margin-bottom: 12px;
+}
+
+#email {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 260px;
+  margin-bottom: 10px;
+}
+
+#email:focus{
+  border: 2px solid #3276c3;
+  outline: none;
+}
+
+#submit {
+  padding: 7px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 7px;
+  border: 1px solid #3276c3;
+  background-color: #3276c3;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #000000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.result-box > p{
+  margin: 0px 0px 20px 60px ;
+  font: bold;
+}
+.result-content p{
+  margin: 20px 0px 0px 60px ;
+  font: bold;
+  line-height: 7px;
+}
+
+#loading {
+  mix-blend-mode: color-burn;
+  margin: 0px 0px 20px 120px ;
+
+}
+
+
+footer {
+  height: 5vh;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* Media Queries here----- */
+
+/* For tablets and larger smartphones (portrait mode) */
+@media (max-width: 768px) {
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .email-validation {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  .result-box > p, .result-content p {
+    margin-left: 20px;
+  }
+
+  #loading {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* For smartphones (landscape mode) */
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav .logo {
+    margin: 10px 0;
+  }
+
+  .email-validation {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  .result-box > p, .result-content p {
+    margin-left: 10px;
+  }
+
+  #loading {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* For smaller smartphones (portrait mode) */
+@media (max-width: 400px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav .logo {
+    margin: 10px 0;
+  }
+
+  /* nav ul {
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .email-validation {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  .result-box > p, .result-content p {
+    margin-left: 5px;
+    line-height: 15px;
+  }
+  .result-content p:nth-last-child(){
+    margin-bottom: 3px;
+  }
+
+  #loading {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
