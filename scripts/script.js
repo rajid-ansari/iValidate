@@ -3,19 +3,19 @@ const resultContainer = document.querySelector(".result-content");
 
 let apiKey = `ema_live_nCLyYIT6mJNBAkZmx1oFaE5DUU9U33tPY7QqixXE`;
 
-	submitBtn.addEventListener("click", async (e) => {
-		e.preventDefault();
-		
-		let email = document.querySelector("#email").value;
-		let loading = document.querySelector(".loading");
-		loading.innerHTML = `<img src="assets/loading.svg" alt="loading" id="loading" width="30px">`;
-		let uri = `https://api.emailvalidation.io/v1/info?apikey=${apiKey}&email=${email}`;
+submitBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-    let response = await fetch(uri);
-    result = await response.json();
-    loading.innerHTML = "";
+  let email = document.querySelector("#email").value;
+  let loading = document.querySelector(".loading");
+  loading.innerHTML = `<img src="assets/loading.svg" alt="loading" id="loading" width="30px">`;
+  let uri = `https://api.emailvalidation.io/v1/info?apikey=${apiKey}&email=${email}`;
 
-    resultContainer.innerHTML = `
+  let response = await fetch(uri);
+  result = await response.json();
+  loading.innerHTML = "";
+
+  resultContainer.innerHTML = `
     	<p><b>Email Address:</b> ${result.email}</p>
     	<p><b>State:</b> ${result.state}</p>
     	<p><b>Reason:</b> ${result.reason}</p>
@@ -28,4 +28,4 @@ let apiKey = `ema_live_nCLyYIT6mJNBAkZmx1oFaE5DUU9U33tPY7QqixXE`;
     	<p><b>Score:</b> ${result.score}</p>
     	<p style="padding-bottom: 10px"><b>Disposable Email Provider:</b> ${result.disposable}</p>
 		`;
-  });
+});
